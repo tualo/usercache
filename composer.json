@@ -1,0 +1,26 @@
+{
+  "name": "tualo/usercache",
+  "description": "tualo - user cache library",
+  "type": "library",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Thomas Hoffmann",
+      "email": "thomas.hoffmann@tualo.de"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Tualo\\Office\\UserCache\\": "src/"
+    },
+    "files": [
+      "src/functions.php"
+    ]
+  },
+  "minimum-stability": "dev",
+  "require": {
+    "tualo/ds": "^1.5",
+    "tualo/server": "^1"
+  },
+  "version": "1.0.6"
+}
