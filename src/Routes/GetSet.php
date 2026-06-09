@@ -11,7 +11,7 @@ class GetSet extends \Tualo\Office\Basic\RouteWrapper
 {
     public static function scope(): string
     {
-        return 'usercache.getset';
+        return 'basic';
     }
 
     public static function register()
