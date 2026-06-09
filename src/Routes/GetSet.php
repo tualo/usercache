@@ -43,14 +43,13 @@ class GetSet extends \Tualo\Office\Basic\RouteWrapper
             TualoApplication::result('success', false);
             try {
                 $input = json_decode(file_get_contents('php://input'), true);
-                if (!isset($input['value'])) {
+                if (!is_array($input)) {
                     http_response_code(400);
                     TualoApplication::result('msg', "Missing 'value' in request body");
                     return;
                 }
-                $value = $input['value'];
                 $userCache = \Tualo\Office\UserCache\UserCache::getInstance();
-                $key = $userCache->setValue($value);
+                $key = $userCache->setValue(json_encode($input));
                 TualoApplication::result('success', true);
                 TualoApplication::result('key', $key);
             } catch (\Exception $e) {
