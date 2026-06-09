@@ -27,7 +27,7 @@ class GetSet extends \Tualo\Office\Basic\RouteWrapper
                 $data = $userCache->getValue($matches['id']);
                 if ($data !== false) {
                     TualoApplication::result('success', true);
-                    TualoApplication::result('data', $data);
+                    TualoApplication::result('data', json_decode($data, true));
                 } else {
                     http_response_code(404);
                     TualoApplication::result('msg', "Key not found");
