@@ -18,9 +18,5 @@
     ]
   },
   "minimum-stability": "dev",
-  "require": {
-    "tualo/ds": ">1.5",
-    "tualo/server": ">1.0.14"
-  },
-  "version": "1.0.13"
+  "version": "1.0.14"
 }
